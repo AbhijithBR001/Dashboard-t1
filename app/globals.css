@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --primary: 187 75% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 16 100% 66%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 352 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 87% 45%;
+    --warning: 43 100% 62%;
+    --danger: 352 100% 50%;
+
+    --muted: 220 2% 92%;
+    --muted-foreground: 0 0% 50%;
+
+    --border: 220 2% 82%;
+    --input: 220 2% 82%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.sidebar-link {
+  @apply flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-muted rounded-md;
+}
+
+.sidebar-link.active {
+  @apply bg-primary/10 text-primary;
+}
+
+.status-badge {
+  @apply px-2 py-1 text-xs font-medium rounded-full;
+}
+
+.status-badge-success {
+  @apply bg-success/20 text-success;
+}
+
+.status-badge-warning {
+  @apply bg-warning/20 text-warning/90;
+}
+
+.status-badge-danger {
+  @apply bg-danger/20 text-danger;
+}
+
