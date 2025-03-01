@@ -196,7 +196,7 @@ export default function DashboardPage() {
               <p className="text-sm font-medium text-yellow-800 ">
                 Total Earning
               </p>
-              <div className="h-20">
+              <div className="h-28">
                 <div className="mt-1 h-12">
                 
                 </div>
@@ -213,7 +213,7 @@ export default function DashboardPage() {
           {/* <Card className="rounded-xl h-full"> */}
           <div className="">
             <div className=""></div>
-            <div className="h-[90vh]">
+            <div className="h-[76vh]">
               <OverviewChart />
             </div>
           </div>

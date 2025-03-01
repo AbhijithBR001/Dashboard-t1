@@ -33,8 +33,8 @@ const PushNotifications = () => {
 
   return (
     <DashboardLayout>
-      <div className="min-h-screen  p-6">
-        <div className="max-w-7xl mx-auto">
+      <div className="  ">
+        <div className="">
           <div className="bg-white rounded-xl shadow-sm p-6 mb-6 border-t-4 border-red-400">
             <h1 className="text-xl font-semibold mb-1">Push Notifications</h1>
             <p className="text-gray-500 mb-6">

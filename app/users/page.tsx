@@ -18,7 +18,7 @@ export default function UsersPage() {
 
   return (
     <DashboardLayout>
-      <p className="text-white mb-4">List of users</p>
+      <p className="text-white text-2xl mb-4">List of users</p>
       <Card className="mb-6 rounded-xl">
         <div className="p-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-end items-end mb-6">

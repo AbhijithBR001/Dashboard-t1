@@ -120,8 +120,8 @@ const GoogleAnalytics = () => {
 
   return (
     <DashboardLayout>
-      <div className="min-h-screen  p-6">
-        <div className="max-w-7xl mx-auto">
+      <div className="">
+        <div className="">
           {/* Connection Status Card */}
           <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
             <h1 className="text-2xl font-bold mb-6">Google Analytics</h1>
