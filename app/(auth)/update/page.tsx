@@ -6,7 +6,6 @@ import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
-import Image from "next/image";
 
 export default function ProfileForm() {
   const router = useRouter();
@@ -25,9 +24,15 @@ export default function ProfileForm() {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [token, setToken] = useState<string | null>(null);
 
-  // Retrieve token from local storage
-  const token = localStorage.getItem("token");
+  // Retrieve token from local storage in a useEffect hook
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedToken = localStorage.getItem("token");
+      setToken(storedToken);
+    }
+  }, []);
 
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,7 +71,7 @@ export default function ProfileForm() {
         {
           headers: {
             "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`, // Include token in headers
+            Authorization: token ? `Bearer ${token}` : "",
           },
         }
       );
@@ -89,6 +94,7 @@ export default function ProfileForm() {
       }
     };
   }, [imagePreview]);
+
   return (
     <div
       className="min-h-screen flex items-center justify-center"
